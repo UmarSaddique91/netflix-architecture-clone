@@ -1,20 +1,104 @@
-.bannerImg{
-  width:100%;
+.hero {
+  position: relative;
+}
+
+.bannerImg {
+  width: 100%;
+  display: block;
   mask-image: linear-gradient(to right, transparent, black 75%);
   -webkit-mask-image: linear-gradient(to right, transparent, black 75%);
 }
 
-.hero{
-  position: relaitve;
+.heroCaption {
+  position: absolute;
+  bottom: 0;
+  padding-left: 6%;
+  width: 100%;
 }
 
-.heroCaption{
-position: absolute;
-bottom: 0;
-padding-left: 8%;
-width: 100%;
+.heroCaption .heroTitle {
+  width: 90%;
+  max-width: 420px;
+  margin-bottom: 25px;
 }
 
-.heroCaption p{
-  width: 55%;
+.heroCaption p {
+  max-width: 650px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #e5e5e5;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-btns {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.hero-btns .btn {
+  border: 0;
+  outline: 0;
+  padding: 8px 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.hero-btns .btn img {
+  width: 22px;
+}
+
+.hero-btns .btn.dark-btn {
+  color: #fff;
+  background: rgba(109, 109, 110, 0.7);
+}
+
+.hero-btns .btn:hover {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.hero-btns .btn.dark-btn:hover {
+  background: rgba(109, 109, 110, 0.4);
+}
+
+.more-cards {
+  padding-left: 6%;
+}
+
+@media (max-width: 1024px) {
+  .heroCaption .heroTitle {
+    max-width: 300px;
+    margin-bottom: 15px;
+  }
+  .heroCaption p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .hero-btns {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroCaption {
+    position: static;
+    padding: 0 4%;
+  }
+  .bannerImg {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  .more-cards {
+    padding-left: 4%;
+  }
 }

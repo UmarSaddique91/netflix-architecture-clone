@@ -3,18 +3,43 @@ import './Home.css'
 import Navbar from '../../components/Navbar/Navbar'
 import heroBanner from '../../assets/hero_banner.jpg'
 import heroTitle from '../../assets/hero_title.png'
+import play_icon from '../../assets/play_icon.png'
+import info_icon from '../../assets/info_icon.png'
+import TitleCards from '../../components/TitleCards/TitleCards'
+import Footer from '../../components/Footer/Footer'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
     <div className='home'>
-      <Navbar/>
+      <Navbar />
       <div className="hero">
-        <img src={heroBanner} alt=""  className='bannerImg'/>
+        <img src={heroBanner} alt="Hero Banner" className='bannerImg' />
         <div className="heroCaption">
-          <img src={heroTitle} alt="" className='heroTitle'/>
-          <p>Discovering his ties to secreat ancient order, a young man living in the modren Istanbul emarks on a quest to save the city from an Immortal enemy.</p>
+          <img src={heroTitle} alt="Hero Title" className='heroTitle' />
+          <p>
+            Discovering his ties to a secret ancient order, a young man living in modern Istanbul embarks on a quest to save the city from an immortal enemy.
+          </p>
+          <div className="hero-btns">
+            <Link to='/player/the-protector' className='btn'>
+              <img src={play_icon} alt="Play" /> Play
+            </Link>
+            <button className='btn dark-btn'>
+              <img src={info_icon} alt="Info" /> More Info
+            </button>
+          </div>
+          <TitleCards />
         </div>
       </div>
+
+      <div className="more-cards">
+        <TitleCards title={"Blockbuster Movies"} category={"top_rated"} />
+        <TitleCards title={"Only on Netflix"} category={"popular"} />
+        <TitleCards title={"Upcoming"} category={"upcoming"} />
+        <TitleCards title={"Top Picks for You"} category={"now_playing"} />
+      </div>
+
+      <Footer />
     </div>
   )
 }

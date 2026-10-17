@@ -1,0 +1,66 @@
+.titlecards {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.titlecards h2 {
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #e5e5e5;
+}
+
+.card-list {
+  display: flex;
+  gap: 12px;
+  overflow-x: scroll;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+}
+
+.card-list::-webkit-scrollbar {
+  display: none;
+}
+
+.card-list {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.card-list .card {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  flex-shrink: 0;
+  transition: transform 0.25s ease-in-out;
+}
+
+.card-list .card:hover {
+  transform: scale(1.06);
+  z-index: 2;
+}
+
+.card-list .card img {
+  width: 240px;
+  height: 135px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  object-fit: cover;
+}
+
+.card-list .card p {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+  max-width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
